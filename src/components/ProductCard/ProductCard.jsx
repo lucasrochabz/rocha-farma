@@ -5,7 +5,7 @@ export const ProductCard = ({ remedio, handleComprar }) => {
     <>
       <div className="product-card">
         <p>Imagem</p>
-        <h4>{remedio.description}</h4>
+        <h4>{remedio.info}</h4>
         <h2>{remedio.name}</h2>
         <h3>{remedio.price}</h3>
         <button onClick={handleComprar}>Comprar</button>

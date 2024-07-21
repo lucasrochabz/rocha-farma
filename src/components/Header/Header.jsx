@@ -11,11 +11,13 @@ export const Header = () => {
 
   return (
     <>
-      <header className="header">
-        <h2>Logo</h2>
-        <div>
-          <button onClick={handleLogin}>Login</button>
-          <button onClick={HandleCarrinho}>Carrinho</button>
+      <header className="header-bg">
+        <div className="header">
+          <h2>Logo</h2>
+          <div className="header-btns">
+            <button onClick={handleLogin}>Login</button>
+            <button onClick={HandleCarrinho}>Carrinho</button>
+          </div>
         </div>
       </header>
     </>
