@@ -1,9 +1,14 @@
+import { ProductList } from './components/ProductList/ProductList';
 import './App.css';
+import { Header } from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
 
 export const App = () => {
   return (
     <>
-      <h2>Rocha Farma</h2>
+      <Header />
+      <ProductList />
+      <Footer />
     </>
   );
 };
