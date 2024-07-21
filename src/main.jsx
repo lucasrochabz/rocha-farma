@@ -5,6 +5,6 @@ import { AdminPage } from './pages/AdminPage.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AdminPage />
+    <App />
   </React.StrictMode>,
 );

@@ -16,7 +16,8 @@ export const ProductList = () => {
       name: 'Paracetamol',
       price: 4.5,
       quantity: 10,
-      info: 'Paracetamol 750mg 20 Comprimidos',
+      info: 'Paracetamol 750mg 20 Comprimidos EMS',
+      stock: 5,
     },
     {
       id: '2',
@@ -24,6 +25,7 @@ export const ProductList = () => {
       price: 6,
       quantity: 20,
       info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, consequuntur!',
+      stock: 10,
     },
     {
       id: '18d4',
@@ -31,6 +33,7 @@ export const ProductList = () => {
       price: 5,
       quantity: 8,
       info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, consequuntur!',
+      stock: 15,
     },
   ];
 

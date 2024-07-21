@@ -4,10 +4,12 @@ import './AdminPage.css';
 export const AdminPage = () => {
   const [remedyData, setRemedyData] = useState({
     name: '',
-    brand: '',
     dosage: '',
     amount: '',
+    brand: '',
+    price: '',
     info: '',
+    stock: '',
   });
 
   const handleChange = (event) => {
@@ -25,23 +27,13 @@ export const AdminPage = () => {
 
   return (
     <>
-      <h2>AdminPage</h2>
-      <form onSubmit={handleInserir}>
+      <form className="form-remedy" onSubmit={handleInserir}>
         <label htmlFor="name">Nome do produto</label>
         <input
           type="text"
           id="name"
           name="name"
           value={remedyData.name}
-          onChange={handleChange}
-        />
-
-        <label htmlFor="brand">Marca</label>
-        <input
-          type="text"
-          id="brand"
-          name="brand"
-          value={remedyData.brand}
           onChange={handleChange}
         />
 
@@ -54,12 +46,30 @@ export const AdminPage = () => {
           onChange={handleChange}
         />
 
-        <label htmlFor="amount">Quantidade de comprimidos</label>
+        <label htmlFor="amount">Quantidade de comprimidos por caixa</label>
         <input
           type="number"
           id="amount"
           name="amount"
           value={remedyData.amount}
+          onChange={handleChange}
+        />
+
+        <label htmlFor="brand">Marca</label>
+        <input
+          type="text"
+          id="brand"
+          name="brand"
+          value={remedyData.brand}
+          onChange={handleChange}
+        />
+
+        <label htmlFor="brand">Preço</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          value={remedyData.price}
           onChange={handleChange}
         />
 
@@ -69,6 +79,16 @@ export const AdminPage = () => {
           id="info"
           name="info"
           value={remedyData.info}
+          onChange={handleChange}
+          placeholder="Nome, dosagem, quantidade e marca"
+        />
+
+        <label htmlFor="stock">Estoque</label>
+        <input
+          type="text"
+          id="stock"
+          name="stock"
+          value={remedyData.stock}
           onChange={handleChange}
         />
 
