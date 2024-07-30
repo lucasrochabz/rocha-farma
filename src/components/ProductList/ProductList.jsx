@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ProductCard } from '../ProductCard/ProductCard';
 import './ProductList.css';
 
 export const ProductList = () => {
+  const [remedios, setRemedios] = useState([]);
   const [item, setItem] = useState(0);
 
   const handleComprar = () => {
@@ -10,40 +11,23 @@ export const ProductList = () => {
     console.log(item + 1);
   };
 
-  const remedios = [
-    {
-      id: '1',
-      name: 'Paracetamol',
-      price: 4.5,
-      quantity: 10,
-      info: 'Paracetamol 750mg 20 Comprimidos EMS',
-      stock: 5,
-    },
-    {
-      id: '2',
-      name: 'Ibuprofeno',
-      price: 6,
-      quantity: 20,
-      info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, consequuntur!',
-      stock: 10,
-    },
-    {
-      id: '18d4',
-      name: 'Dipirona',
-      price: 5,
-      quantity: 8,
-      info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, consequuntur!',
-      stock: 15,
-    },
-  ];
+  const loadRemedio = async () => {
+    const response = await fetch('http://localhost:3000/remedio');
+    const data = await response.json();
+    setRemedios(data);
+  };
+
+  useEffect(() => {
+    loadRemedio();
+  }, []);
 
   return (
     <>
       <span className="carrinho-span">{item}</span>
       <section className="product-list">
-        {remedios.map((remedio, index) => (
+        {remedios.map((remedio) => (
           <ProductCard
-            key={index}
+            key={remedio.id}
             remedio={remedio}
             handleComprar={handleComprar}
           />
