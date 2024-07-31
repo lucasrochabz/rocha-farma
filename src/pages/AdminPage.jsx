@@ -64,7 +64,7 @@ export const AdminPage = () => {
           onChange={handleChange}
         />
 
-        <label htmlFor="brand">Preço</label>
+        <label htmlFor="price">Preço</label>
         <input
           type="number"
           id="price"
