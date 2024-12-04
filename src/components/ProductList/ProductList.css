@@ -1,0 +1,14 @@
+.carrinho-span {
+  display: inline-block;
+  background-color: red;
+  padding: 0.2rem 0.4rem;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
